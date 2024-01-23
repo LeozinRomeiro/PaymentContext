@@ -1126,7 +1126,8 @@
       "Microsoft.NET.Test.Sdk >= 17.6.0",
       "PaymentContext.Domain >= 1.0.0",
       "PaymentContext.Shared >= 1.0.0",
-      "coverlet.collector >= 6.0.0"
+      "coverlet.collector >= 6.0.0",
+      "flunt >= 2.0.5"
     ]
   },
   "packageFolders": {
@@ -1196,6 +1197,10 @@
           "coverlet.collector": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "flunt": {
+            "target": "Package",
+            "version": "[2.0.5, )"
           }
         },
         "imports": [

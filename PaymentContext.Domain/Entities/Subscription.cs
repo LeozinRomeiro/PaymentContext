@@ -1,5 +1,6 @@
-using System.Collections.ObjectModel;
 using PaymentContext.Shared.Entities;
+using Flunt.Validations;
+using Flunt.Notifications;
 
 namespace PaymentContext.Domain.Entities;
 
@@ -24,6 +25,11 @@ public class Subscription : Entity
     public IReadOnlyCollection<Payment> Payments {get {return _payments.ToArray();}}
 
     public void AddPayment(Payment payment){
+        
+        AddNotifications(new Contract<Notification>()
+            .Requires()
+            .IsGreaterThan(DateTime.Now, payment.PaidDate, "Subscription.Payments", "A data do pagamento deve ser futura")
+        );
         _payments.Add(payment);
     }
 
