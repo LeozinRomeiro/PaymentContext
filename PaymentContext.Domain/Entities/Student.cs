@@ -1,5 +1,6 @@
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Entities;
+using Flunt.Notifications;
 
 namespace PaymentContext.Domain.Entities;
 
@@ -12,6 +13,8 @@ public class Student : Entity
         Document = document;
         Email = email;
         _subscriptions=new List<Subscription>();
+
+        AddNotifications(name, document, email);
     }
     public Name Name { get; private set; }
     public Document Document { get; private set; }
