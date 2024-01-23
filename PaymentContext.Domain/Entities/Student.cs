@@ -1,27 +1,25 @@
+using PaymentContext.Domain.ValueObjects;
+
 namespace PaymentContext.Domain.Entities;
 
 public class Student
 {
-    private List<Subscription> _subscriptions;
-    public Student(string firstName, string lastName, string document, string email)
+    private IList<Subscription> _subscriptions;
+    public Student(Name name, string document, string email)
     {
-        FirstName = firstName;
-        LastName = lastName;
+        Name = name;
         Document = document;
         Email = email;
-        _subscriptions=new();
+        _subscriptions=new List<Subscription>();
     }
-
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public string Document { get; set; }
-    public string Email { get; set; }
-    public string Address {get; set;}
+    public Name Name { get; private set; }
+    public string Document { get; private set; }
+    public string Email { get; private set; }
     public IReadOnlyCollection<Subscription> Subscriptions { get{ return _subscriptions.ToArray(); } }
 
     public void AddSubscription(Subscription subscription){
         foreach(var sub in Subscriptions){
-            sub.Active = false;
+            sub.Activate();
         }
 
         _subscriptions.Add(subscription);
