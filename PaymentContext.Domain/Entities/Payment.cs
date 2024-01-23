@@ -1,3 +1,5 @@
+using Flunt.Notifications;
+using Flunt.Validations;
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Entities;
 
@@ -16,6 +18,10 @@ public abstract class Payment : Entity
         Document = document;
         Address = address;
         Email = email;
+
+        AddNotifications(new Contract<Notification>()
+        .Requires()
+        .IsGreaterThan(0, Total, "Payment.Total", "Total nao pode ser zero"));
     }
 
     public string Number { get; private set; }
