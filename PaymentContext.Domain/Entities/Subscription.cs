@@ -1,11 +1,12 @@
 using System.Collections.ObjectModel;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities;
 
-public class Subscription
+public class Subscription : Entity
 {
     private IList<Payment> _payments;
-    public Subscription(DateTime? expireDate, string address)
+    public Subscription(DateTime? expireDate, Address address)
     {
         CreateDate = DateTime.Now;
         LastUpdateDate = DateTime.Now;
@@ -19,7 +20,7 @@ public class Subscription
     public DateTime LastUpdateDate { get; private set;}
     public DateTime? ExpireDate { get; private set;}
     public bool Active {get; private set;}
-    public string Address {get; private set;}
+    public Address Address {get; private set;}
     public IReadOnlyCollection<Payment> Payments {get {return _payments.ToArray();}}
 
     public void AddPayment(Payment payment){
