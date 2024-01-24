@@ -26,15 +26,19 @@ namespace PaymentContext.Tests
         }
         [TestMethod]
         public void ShoulReturnErrorWhenHadActiveSubscription(){
+            
             _subscription.AddPayment(_payment);
             _student.AddSubscription(_subscription);
             
-            Assert.IsTrue(!_student.IsValid);
+            Assert.IsFalse(_student.IsValid);
         }
         [TestMethod]
         public void ShoulReturnErrorWhenSubscriptionHasNoPayment(){
             
-            Assert.IsTrue(!_student.IsValid);
+            var _subscriptionNoPayment = new Subscription(null);
+            _student.AddSubscription(_subscriptionNoPayment);
+
+            Assert.IsFalse(_student.IsValid);
         }
         
         [TestMethod]
