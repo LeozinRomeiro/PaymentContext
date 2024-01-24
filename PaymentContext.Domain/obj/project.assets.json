@@ -42,8 +42,8 @@
     },
     "PaymentContext.Shared/1.0.0": {
       "type": "project",
-      "path": "../PaymentContext.shared/PaymentContext.Shared.csproj",
-      "msbuildProject": "../PaymentContext.shared/PaymentContext.Shared.csproj"
+      "path": "../PaymentContext.Shared/PaymentContext.Shared.csproj",
+      "msbuildProject": "../PaymentContext.Shared/PaymentContext.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -85,8 +85,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Dev\\PaymentContext\\PaymentContext.shared\\PaymentContext.Shared.csproj": {
-              "projectPath": "C:\\Dev\\PaymentContext\\PaymentContext.shared\\PaymentContext.Shared.csproj"
+            "C:\\Dev\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj": {
+              "projectPath": "C:\\Dev\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj"
             }
           }
         }

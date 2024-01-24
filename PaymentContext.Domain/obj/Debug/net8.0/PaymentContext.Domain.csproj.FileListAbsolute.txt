@@ -13,3 +13,4 @@ C:\Dev\PaymentContext\PaymentContext.Domain\bin\Debug\net8.0\PaymentContext.Shar
 C:\Dev\PaymentContext\PaymentContext.Domain\bin\Debug\net8.0\PaymentContext.Shared.pdb
 C:\Dev\PaymentContext\PaymentContext.Domain\obj\Debug\net8.0\PaymentContext.Domain.csproj.AssemblyReference.cache
 C:\Dev\PaymentContext\PaymentContext.Domain\obj\Debug\net8.0\PaymentContext.Domain.csproj.CopyComplete
+C:\Dev\PaymentContext\PaymentContext.Domain\obj\Debug\net8.0\PaymentContext.Domain.sourcelink.json
