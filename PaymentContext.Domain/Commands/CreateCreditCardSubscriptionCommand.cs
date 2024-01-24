@@ -20,8 +20,7 @@ public class CreateCreditCardSubscriptionCommand{
     public decimal TotalPad { get;   set; }
     public string Payer { get;   set; }
     public string PayerDocument {get;   set;}
-    public Address PayerAddress {get;   set;}
-    public Email PayerEmail {get;   set;}
+    public string PayerEmail {get;   set;}
 
     public string Street { get;   set; }
     public string Number { get;   set; }
