@@ -9,13 +9,6 @@ public class Name : ValueObject {
     {
         FirstName = firstName;
         LastName = lastName;
-
-        AddNotifications(new Contract<Notification>()
-            .Requires()
-            .IsGreaterThan(FirstName, 3, "Name.FirstName", "Nome deve conter pelo menos 3 caracteres")
-            .IsGreaterThan(LastName, 3, "Name.LastName", "Sobrenome deve conter pelo menos 3 caracteres")
-            .IsLowerThan(FirstName, 40, "Name.FirstName", "Nome deve conter até 40 caracteres")
-        );
     }
 
     public string FirstName { get; set; }
