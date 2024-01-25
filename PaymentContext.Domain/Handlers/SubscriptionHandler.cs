@@ -54,6 +54,10 @@ namespace PaymentContext.Domain.Handlers{
 
             AddNotifications(name, document, email, address, student, subscription, payerDocument, payerEmail, email);
 
+            if(IsValid){
+                return new CommandResult(false, "Assinatura invalida! Não foi possivel realiza-la");
+            }
+
             _repository.CreateSubscription(student);
 
             _emailService.Send(student.Name.ToString(), student.Email.Address, "Bem vindo!","Sua assinatura foi confirmada");
@@ -88,6 +92,9 @@ namespace PaymentContext.Domain.Handlers{
             student.AddSubscription(subscription);
 
             AddNotifications(name, document, email, address, student, subscription, payerDocument, payerEmail, email);
+            if(IsValid){
+                return new CommandResult(false, "Assinatura invalida! Não foi possivel realiza-la");
+            }
 
             _repository.CreateSubscription(student);
 

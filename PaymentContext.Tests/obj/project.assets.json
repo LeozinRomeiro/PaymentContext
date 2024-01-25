@@ -1115,8 +1115,8 @@
     },
     "PaymentContext.Shared/1.0.0": {
       "type": "project",
-      "path": "../PaymentContext.Shared/PaymentContext.Shared.csproj",
-      "msbuildProject": "../PaymentContext.Shared/PaymentContext.Shared.csproj"
+      "path": "../PaymentContext.shared/PaymentContext.Shared.csproj",
+      "msbuildProject": "../PaymentContext.shared/PaymentContext.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1166,8 +1166,8 @@
             "C:\\Dev\\PaymentContext\\PaymentContext.Domain\\PaymentContext.Domain.csproj": {
               "projectPath": "C:\\Dev\\PaymentContext\\PaymentContext.Domain\\PaymentContext.Domain.csproj"
             },
-            "C:\\Dev\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj": {
-              "projectPath": "C:\\Dev\\PaymentContext\\PaymentContext.Shared\\PaymentContext.Shared.csproj"
+            "C:\\Dev\\PaymentContext\\PaymentContext.shared\\PaymentContext.Shared.csproj": {
+              "projectPath": "C:\\Dev\\PaymentContext\\PaymentContext.shared\\PaymentContext.Shared.csproj"
             }
           }
         }
