@@ -1,5 +1,6 @@
 using Flunt.Notifications;
 using Flunt.Validations;
+using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Commands;
 
@@ -22,7 +23,7 @@ public class CreateBoletoSubscriptionCommand : Notifiable<Notification>, IComman
     public decimal TotalPad { get;   set; }
     public string Payer { get;   set; }
     public string PayerDocument {get;   set;}
-    public string PayerAddress {get;   set;}
+    public EDocumentType PayerDocumentType {get;   set;}
     public string PayerEmail {get;   set;}
 
     public string Street { get;   set; }
